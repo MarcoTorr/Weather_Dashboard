@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en_US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+       
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"/>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <header>
+
+            <div class="bg-dark ">
+                <h1 class="text-white text-center">Weather Dashboard</h1>
+                <a  href="#" id="recent-search" class= "text-right"alt= "recent-searches">Recent searches</a></li>
+            </div>
+            <div id="recent-search-container" style="display:none">
+                <ul id="list-rs"></ul>
+            </div>
+            
+                <div class="row">
+                    <div class="c1">
+
+                        <div class="col">
+                            <h2>Search for a City:</h2>
+                            <input id="Search-input" type="text" class="search-bar" placeholder="Search city">
+                            <button id="search-btn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+                            width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                            </path>
+                            </svg></button> <br> <br>
+                            <button id="MC"class="btn" style="width: 250px;">Mexico City</button><br><br>
+                            <button id="Tor"class="btn" style="width: 250px;">Toronto</button><br><br>
+                            <button id="DC"class="btn" style="width: 250px;">Washington DC</button><br><br>
+                            <button id="SP"class="btn" style="width: 250px;">Sao Paulo</button><br><br>
+                            <button id="BA"class="btn" style="width: 250px;">Buenos Aires</button><br><br>
+                            <button id="Bo"class="btn" style="width: 250px;">Bogota</button><br><br>
+                            <button id="Ni"class="btn" style="width: 250px;">Nicaragua</button><br><br>
+                        </div>
+                </div>       
+                <div class="c2">    
+                    <div class="col" style="margin:20px">
+                        
+                        <div class="row">
+                            <h3 id="F0"></h3>
+                        </div>    
+                        <div class="row" style="height: 50px;"></div>
+                        <div class="row">    
+                            <h3>Temp: <span id="F0-t"></span></h4><br>
+                        </div>      
+                        <div class="row"> 
+                            <h3>Wind: <span id="F0-w"></span></h4><br>
+                        </div>    
+                        <div class="row">     
+                            <h3>Humidity: <span id="F0-h"></span></h4>
+                        </div>
+                        <div class="row">     
+                            <h3>UV Index: <span id="F0-UV"></span></h4>
+                        </div>
+                        <img id="icon" width="100px" height="100px" src="">
+
+                        <div class="row" style="height: 50px;"></div>
+                        <div class="container">
+                            <h3>5-Day Forecast:</h3>
+                            <section class="row align-items-start" style=" margin:15px; width:900px">
+                                <div class="col justify-content-center" style="background-color: rgb(32, 103, 124);border-radius: 15px;margin: 10px;">
+                                    <h4 id="F1">Day 1</h4>
+                                    <h4>Temp:<span id="F1-t"></span></h4>
+                                    <h4>Wind:<span id="F1-w"></span></h4>
+                                    <h4>Humidity:<span id="F1-h"></span></h4>
+                                </div>
+                                <div class="col justify-content-center" style="background-color: rgb(32, 103, 124);border-radius: 15px;margin: 10px;">
+                                    <h4 id="F2">Day 2</h4>
+                                    <h4>Temp:<span id="F2-t"></span></h4>
+                                    <h4>Wind:<span id="F2-w"></span></h4>
+                                    <h4>Humidity:<span id="F2-h"></span></h4>
+                                </div>
+                                <div class="col justify-content-center" style="background-color: rgb(32, 103, 124);border-radius: 15px;margin: 10px;">
+                                    <h4 id="F3">Day 3</h4>
+                                    <h4>Temp:<span id="F3-t"></span></h4>
+                                    <h4>Wind:<span id="F3-w"></span></h4>
+                                    <h4>Humidity:<span id="F3-h"></span></h4>
+                                </div>
+                                <div class="col justify-content-center" style="background-color: rgb(32, 103, 124);border-radius: 15px;margin: 10px;">
+                                    <h4 id="F4">Day 4</h4>
+                                    <h4>Temp:<span id="F4-t"></span></h4>
+                                    <h4>Wind:<span id="F4-w"></span></h4>
+                                    <h4>Humidity:<span id="F4-h"></span></h4>
+                                </div>
+                                <div class="col justify-content-center" style="background-color: rgb(32, 103, 124);border-radius: 15px;margin: 10px;">
+                                    <h4 id="F5">Day 5</h4>
+                                    <h4>Temp:<span id="F5-t"></span></h4>
+                                    <h4>Wind:<span id="F5-w"></span></h4>
+                                    <h4>Humidity:<span id="F5-h"></span></h4>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+            <script src="script.js"></script>
+
+ </html>

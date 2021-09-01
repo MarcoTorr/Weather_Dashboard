@@ -1,0 +1,13 @@
+.c1 {
+    grid-column: col ;
+    grid-row: row 2 ;
+}
+  
+.c2 {
+    grid-column: col 2 / span 3 ;
+    grid-row: row 2 ;
+}
+
+h4{
+    font-size: 20px;
+} 
